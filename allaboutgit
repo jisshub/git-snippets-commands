@@ -15,4 +15,11 @@ commit chnages to local repo
 update commit message of recent commit
 -> git commit --amend -m "updated"
 
+history of commits
+-> git log  #show all commit history
+-> git log -1 #shows recent commit
+-> git log --author="authorusername"  #shows commit of given author
+-> git log --since="date"  #show commits after given date
+-> git log --until="date"  #shows commits until given date
+
 
