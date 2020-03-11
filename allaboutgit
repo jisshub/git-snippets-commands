@@ -1,0 +1,18 @@
+initialize a git repository
+-> git init
+
+add changes to staging area
+-> git add --all
+-> git add filename
+
+reset those changes
+-> git reset filename
+-> git reset -- affects all files
+
+commit chnages to local repo
+-> git commit -m "commit meesage"
+
+update commit message of recent commit
+-> git commit --amend -m "updated"
+
+
