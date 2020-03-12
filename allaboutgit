@@ -22,4 +22,21 @@ history of commits
 -> git log --since="date"  #show commits after given date
 -> git log --until="date"  #shows commits until given date
 
+adding and commiting at once
+-> git commit -am "commit message" #can only used when files that changed commited atleast once
+
+
+viewing changes made in a file
+-> git diff # ++ denotes new changes, -- denotes previous changes
+
+viewing changes added to staging area
+-> git diff --staged
+
+deleting a file from local repo
+-> git rm filename  #never delete a file direclty using rm from repo, use git rm file
+
+
+to revert the changes made in a file to the previous commit in case any error pops up,
+-> git checkout --filename
+
 
