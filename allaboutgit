@@ -5,7 +5,9 @@ add changes to staging area
 -> git add --all
 -> git add filename
 
-reset those changes
+
+reset changes addeds to the stagin area
+-> gi reset HEAD filename
 -> git reset filename
 -> git reset -- affects all files
 
@@ -38,5 +40,21 @@ deleting a file from local repo
 
 to revert the changes made in a file to the previous commit in case any error pops up,
 -> git checkout --filename
+
+to clean/remove fiile not in the staging area
+-> git clean -f  # prompts to whether remove
+-> git clean -n  #removes untracked files in the folder
+-> git clean -f filename #remove a specific untracked file
+   # only remove untracked files - cant remove tracked files
+
+ignoring files
+-> add files to .gitignore
+
+ignoring all files with a specific extension but tracking specific file in those
+-> add *.css to .gitignore  # ignored all css files
+-> add !file.css to .gitignore # tracked only one css file
+
+
+
 
 
