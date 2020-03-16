@@ -23,6 +23,9 @@ history of commits
 -> git log --author="authorusername"  #shows commit of given author
 -> git log --since="date"  #show commits after given date
 -> git log --until="date"  #shows commits until given date
+-> git log --oneline  #shows commits history in one line
+-> git log --before = "date"  #same as --until
+-> git log  --after = "date"   #same as --since
 
 adding and commiting at once
 -> git commit -am "commit message" #can only used when files that changed commited atleast once
@@ -54,6 +57,17 @@ ignoring all files with a specific extension but tracking specific file in those
 -> add *.css to .gitignore  # ignored all css files
 -> add !file.css to .gitignore # tracked only one css file
 
+
+removing commited file from local repo
+-> git rm --cached filename   #it removes file from repo but not from the machine
+
+git branching - basics
+-> git branch  #all branches
+-> git branch branchname #new branch
+-> git checkout branchname #checkout to new branch
+-> git checkout -b branchname #create nd checkout to new branch at same time
+
+Note: changes made in sub branch doesnt affect master branch unless they r merged.
 
 
 
