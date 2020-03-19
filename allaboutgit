@@ -61,6 +61,7 @@ ignoring all files with a specific extension but tracking specific file in those
 removing commited file from local repo
 -> git rm --cached filename   #it removes file from repo but not from the machine
 
+
 git branching - basics
 -> git branch  #all branches
 -> git branch branchname #new branch
@@ -68,6 +69,42 @@ git branching - basics
 -> git checkout -b branchname #create nd checkout to new branch at same time
 
 Note: changes made in sub branch doesnt affect master branch unless they r merged.
+
+stashing changes
+------------------
+scenario:
+	checkout to branch1 - changes to a file while in branch1 - checkout to branch2 - before not commiting changes in branch1 - raises error -abort the process - soluion: stash the changes before checkout to branch2. :)
+
+--stash is a trash folder where v can put changes and restore them back any time
+
+-- to save changes to a stash,
+-> git stash save "message"
+-> git stash list
+
+Grabing changes back from stash to the branch,
+-> git stash pop "stash@{0}"
+
+-- it cuts the stash with given stashid from the stash folder and put those changes back to the branch.
+-- using pop removes that stash from the folder 
+
+-> git stash apply "stash{@}0"
+
+-- it copies the stash from thr folder and put changes back to branch.
+-- using apply didn remove the stash from folder.
+
+-- once changes are stashed, user any checkout to other branch :)
+
+Note: Always use stashid along with both commands. if not, it grabs the last stash added.
+
+To drop a stash from stash folder
+-> git stash drop "stash@{0}"
+	- it drop the stash with given stash id
+
+to drop all stashes
+-> git stash clear
+
+
+
 
 
 
