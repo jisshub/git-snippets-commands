@@ -68,6 +68,21 @@ git branching - basics
 -> git checkout branchname #checkout to new branch
 -> git checkout -b branchname #create nd checkout to new branch at same time
 
+merging branches
+------------
+-> git checkout -b branch2
+
+made some changes here and commit
+
+-> git commit -am "commited"
+
+later want to merge those changes/versions with our master branch/ or anpther branch
+
+-> git checkout master
+-> git merge branch2
+
+so now commits made in banch2 is merged with master banch
+
 Note: changes made in sub branch doesnt affect master branch unless they r merged.
 
 stashing changes
