@@ -67,6 +67,12 @@ git branching - basics
 -> git branch branchname #new branch
 -> git checkout branchname #checkout to new branch
 -> git checkout -b branchname #create nd checkout to new branch at same time
+-> git branch -d branchname  # delete a branch - checkout to master before deleting.
+
+incased while deleting branch saying branch is not fully merged,
+
+use, 
+-> git branch -D branchname
 
 merging branches
 ------------
