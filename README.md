@@ -84,11 +84,11 @@ git checkout --filename
 ```
 
 ## ignoring files
--> add files to .gitignore
+- add files to .gitignore
 
 ## ignoring all files with a specific extension but tracking specific file in those
--> add *.css to .gitignore  # ignored all css files
--> add !file.css to .gitignore # tracked only one css file
+- add *.css to .gitignore  # ignored all css files
+- add !file.css to .gitignore # tracked only one css file
 
 
 ## removing commited file from local repo
