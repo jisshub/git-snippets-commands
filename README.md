@@ -35,25 +35,32 @@ git commit --amend -m "updated"
 ## Get History of commits
 
 ```git
--> git log  #show all commit history
--> git log -1 #shows recent commit
--> git log --author="authorusername"  #shows commit of given author
--> git log --since="date"  #show commits after given date
--> git log --until="date"  #shows commits until given date
--> git log --oneline  #shows commits history in one line
--> git log --before = "date"  #same as --until
--> git log  --after = "date"   #same as --since
+git log  #show all commit history
+git log -1 #shows recent commit
+git log --author="authorusername"  #shows commit of given author
+git log --since="date"  #show commits after given date
+git log --until="date"  #shows commits until given date
+git log --oneline  #shows commits history in one line
+git log --before = "date"  #same as --until
+git log  --after = "date"   #same as --since
 ```
-adding and commiting at once
--> git commit -am "commit message" #can only used when files that changed commited atleast once
+## adding and commiting at once
 
+```git
+git commit -am "commit message" #can only used when files that changed commited atleast once
+```
 
-viewing changes made in a file
--> git diff # ++ denotes new changes, -- denotes previous changes
+## viewing changes made in a file
 
-viewing changes added to staging area
--> git diff --staged
+```git
+git diff # ++ denotes new changes, -- denotes previous changes
+```
 
+## viewing changes added to staging area
+
+```git
+git diff --staged
+```
 deleting a file from local repo
 -> git rm filename  #never delete a file direclty using rm from repo, use git rm file
 
