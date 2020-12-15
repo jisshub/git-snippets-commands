@@ -125,6 +125,20 @@ to drop all stashes
 -> git stash clear
 
 
+## rollback/checkout to previous commit
+
+```git
+git checkout <commit_id> .
+
+git checkout 09d483c .
+```
+- it will checkout to previous commit.
+
+more on :
+https://stackoverflow.com/a/2007704
+
+---
+
 
 
 
