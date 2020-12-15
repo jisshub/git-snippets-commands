@@ -1,26 +1,40 @@
 # git-snippets-commands
 
 
-initialize a git repository
--> git init
+## initialize a git repository
+```git
+git init
+```
 
-add changes to staging area
--> git add --all
--> git add filename
+## add changes to staging area
 
+```git
+git add --all
+git add filename
+```
 
-reset changes addeds to the stagin area
--> gi reset HEAD filename
--> git reset filename
--> git reset -- affects all files
+## reset changes addeds to the stagin area
 
-commit chnages to local repo
--> git commit -m "commit meesage"
+```git
+git reset HEAD filename
+git reset filename
+git reset -- affects all files
+```
+## commit chnages to local repo
 
-update commit message of recent commit
--> git commit --amend -m "updated"
+```git
+git commit -m "commit meesage"
+```
 
-history of commits
+## update commit message of recent commit
+
+```git
+git commit --amend -m "updated"
+```
+
+## Get History of commits
+
+```git
 -> git log  #show all commit history
 -> git log -1 #shows recent commit
 -> git log --author="authorusername"  #shows commit of given author
@@ -29,7 +43,7 @@ history of commits
 -> git log --oneline  #shows commits history in one line
 -> git log --before = "date"  #same as --until
 -> git log  --after = "date"   #same as --since
-
+```
 adding and commiting at once
 -> git commit -am "commit message" #can only used when files that changed commited atleast once
 
