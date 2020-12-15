@@ -61,104 +61,133 @@ git diff # ++ denotes new changes, -- denotes previous changes
 ```git
 git diff --staged
 ```
-deleting a file from local repo
--> git rm filename  #never delete a file direclty using rm from repo, use git rm file
 
+## deleting a file from local repo
 
-to revert the changes made in a file to the previous commit in case any error pops up,
--> git checkout --filename
+```git
+git rm filename  #never delete a file direclty using rm from repo, use git rm file
+```
 
-to clean/remove fiile not in the staging area
+## revert the changes made in a file to the previous commit in case any error pops up,
+
+```git 
+git checkout --filename
+```
+
+## clean/remove fiile not in the staging area
+
+```git
 -> git clean -f  # prompts to whether remove
 -> git clean -n  #removes untracked files in the folder
 -> git clean -f filename #remove a specific untracked file
    # only remove untracked files - cant remove tracked files
+```
 
-ignoring files
+## ignoring files
 -> add files to .gitignore
 
-ignoring all files with a specific extension but tracking specific file in those
+## ignoring all files with a specific extension but tracking specific file in those
 -> add *.css to .gitignore  # ignored all css files
 -> add !file.css to .gitignore # tracked only one css file
 
 
-removing commited file from local repo
--> git rm --cached filename   #it removes file from repo but not from the machine
+## removing commited file from local repo
 
+```git
+git rm --cached filename   #it removes file from repo but not from the machine
+```
 
-git branching - basics
--> git branch  #all branches
--> git branch branchname #new branch
--> git checkout branchname #checkout to new branch
--> git checkout -b branchname #create nd checkout to new branch at same time
--> git branch -d branchname  # delete a branch - checkout to master before deleting.
+## git branching - basics
 
-incased while deleting branch saying branch is not fully merged,
+```git
+git branch  #all branches
+git branch branchname #new branch
+git checkout branchname #checkout to new branch
+git checkout -b branchname #create nd checkout to new branch at same time
+git branch -d branchname  # delete a branch - checkout to master before deleting.
+```
 
-use, 
--> git branch -D branchname
+##incase while deleting branch saying branch is not fully merged,
 
-merging branches
-------------
--> git checkout -b branch2
+```git
+git branch -D branchname
+```
 
-made some changes here and commit
+## merging branches
 
--> git commit -am "commited"
+```git
+git checkout -b branch2
+```
+- made some changes here and commit
 
-later want to merge those changes/versions with our master branch/ or anpther branch
+```git
+git commit -am "commited"
+```
 
--> git checkout master
--> git merge branch2
+- later want to merge those changes/versions with our master branch/ or anpther branch
 
-so now commits made in banch2 is merged with master banch
+```git
+git checkout master
+git merge branch2
+```
+- so now commits made in branch2 is merged with master banch
 
 Note: changes made in sub branch doesnt affect master branch unless they r merged.
 
-stashing changes
-------------------
+## stashing changes
+
 scenario:
 	checkout to branch1 - changes to a file while in branch1 - checkout to branch2 - before not commiting changes in branch1 - raises error -abort the process - soluion: stash the changes before checkout to branch2. :)
 
---stash is a trash folder where v can put changes and restore them back any time
+- stash is a trash folder where v can put changes and restore them back any time
 
--- to save changes to a stash,
--> git stash save "message"
--> git stash list
+- to save changes to a stash,
 
-Grabing changes back from stash to the branch,
--> git stash pop "stash@{0}"
+```git
+git stash save "message"
+git stash list
+```
 
--- it cuts the stash with given stashid from the stash folder and put those changes back to the branch.
--- using pop removes that stash from the folder 
+## Grabing changes back from stash to the branch,
 
--> git stash apply "stash{@}0"
+```git
+git stash pop "stash@{0}"
+```
 
--- it copies the stash from thr folder and put changes back to branch.
--- using apply didn remove the stash from folder.
+- it cuts the stash with given stashid from the stash folder and put those changes back to the branch.
+- using pop removes that stash from the folder 
 
--- once changes are stashed, user any checkout to other branch :)
+```git
+git stash apply "stash{@}0"
+```
 
-Note: Always use stashid along with both commands. if not, it grabs the last stash added.
+- it copies the stash from thr folder and put changes back to branch.
+- using apply didn remove the stash from folder.
+- once changes are stashed, user any checkout to other branch :)
 
-To drop a stash from stash folder
--> git stash drop "stash@{0}"
-	- it drop the stash with given stash id
+**Note**: Always use stashid along with both commands. if not, it grabs the last stash added.
 
-to drop all stashes
--> git stash clear
+- To drop a stash from stash folder
 
+```git
+git stash drop "stash@{0}"
+```
+- it drop the stash with given stash id
+
+## to drop all stashes
+
+```git
+git stash clear
+```
 
 ## rollback/checkout to previous commit
 
 ```git
 git checkout <commit_id> .
-
 git checkout 09d483c .
 ```
 - it will checkout to previous commit.
 
-more on :
-https://stackoverflow.com/a/2007704
+[StackOverflow](https://stackoverflow.com/a/2007704)
 
 ---
