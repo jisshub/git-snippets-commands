@@ -32,6 +32,12 @@ git commit -m "commit meesage"
 git commit --amend -m "updated"
 ```
 
+## Pushing changes to remote repo
+
+```git
+git push -u origin master (first time push)
+git push
+```
 ## Get History of commits
 
 ```git
