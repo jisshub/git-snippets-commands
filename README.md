@@ -13,6 +13,13 @@ git add --all
 git add filename
 ```
 
+## set github configuration
+
+```git
+git config --global user.name "username"
+git config --global user.email "email"
+```
+
 ## reset changes addeds to the stagin area
 
 ```git
@@ -54,6 +61,12 @@ git log  --after = "date"   #same as --since
 
 ```git
 git commit -am "commit message" #can only used when files that changed commited atleast once
+```
+
+## View the remote repository URL
+
+```git
+git config --get remote.origin.url
 ```
 
 ## viewing changes made in a file
