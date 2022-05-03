@@ -27,7 +27,7 @@ git reset HEAD filename
 git reset filename
 git reset -- affects all files
 ```
-## commit chnages to local repo
+## commit changes to local repo
 
 ```git
 git commit -m "commit meesage"
@@ -87,6 +87,14 @@ git diff --staged
 git rm filename  #never delete a file direclty using rm from repo, use git rm file
 ```
 
+## Revert to previous commit
+
+```git
+git add --all
+git commit -m "Commit"
+git revert --no-commit 0766c053..HEAD
+```
+
 ## revert the changes made in a file to the previous commit in case any error pops up,
 
 ```git 
@@ -126,7 +134,7 @@ git checkout -b branchname #create nd checkout to new branch at same time
 git branch -d branchname  # delete a branch - checkout to master before deleting.
 ```
 
-##incase while deleting branch saying branch is not fully merged,
+## incase while deleting branch saying branch is not fully merged,
 
 ```git
 git branch -D branchname
