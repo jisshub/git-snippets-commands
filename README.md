@@ -134,6 +134,12 @@ git checkout -b branchname #create nd checkout to new branch at same time
 git branch -d branchname  # delete a branch - checkout to master before deleting.
 ```
 
+## rename git branch
+
+```git
+git branch -m <oldname> <newname>
+```
+
 ## incase while deleting branch saying branch is not fully merged,
 
 ```git
