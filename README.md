@@ -1,51 +1,51 @@
 # git-snippets-commands
 
 
-## initialize a git repository
+# initialize a git repository
 ```git
 git init
 ```
 
-## add changes to staging area
+# add changes to staging area
 
 ```git
 git add --all
 git add filename
 ```
 
-## set github configuration
+# set github configuration
 
 ```git
 git config --global user.name "username"
 git config --global user.email "email"
 ```
 
-## reset changes addeds to the stagin area
+# reset changes addeds to the stagin area
 
 ```git
 git reset HEAD filename
 git reset filename
 git reset -- affects all files
 ```
-## commit changes to local repo
+# commit changes to local repo
 
 ```git
 git commit -m "commit meesage"
 ```
 
-## update commit message of recent commit
+# update commit message of recent commit
 
 ```git
 git commit --amend -m "updated"
 ```
 
-## Pushing changes to remote repo
+# Pushing changes to remote repo
 
 ```git
 git push -u origin master (first time push)
 git push
 ```
-## Get History of commits
+# Get History of commits
 
 ```git
 git log  #show all commit history
@@ -57,37 +57,37 @@ git log --oneline  #shows commits history in one line
 git log --before = "date"  #same as --until
 git log  --after = "date"   #same as --since
 ```
-## adding and commiting at once
+# adding and commiting at once
 
 ```git
 git commit -am "commit message" #can only used when files that changed commited atleast once
 ```
 
-## View the remote repository URL
+# View the remote repository URL
 
 ```git
 git config --get remote.origin.url
 ```
 
-## viewing changes made in a file
+# viewing changes made in a file
 
 ```git
 git diff # ++ denotes new changes, -- denotes previous changes
 ```
 
-## viewing changes added to staging area
+# viewing changes added to staging area
 
 ```git
 git diff --staged
 ```
 
-## deleting a file from local repo
+# deleting a file from local repo
 
 ```git
 git rm filename  #never delete a file direclty using rm from repo, use git rm file
 ```
 
-## Revert to previous commit
+# Revert to previous commit
 
 ```git
 git add --all
@@ -95,13 +95,13 @@ git commit -m "Commit"
 git revert --no-commit 0766c053..HEAD
 ```
 
-## revert the changes made in a file to the previous commit in case any error pops up,
+# revert the changes made in a file to the previous commit in case any error pops up,
 
 ```git 
 git checkout --filename
 ```
 
-## clean/remove fiile not in the staging area
+# clean/remove fiile not in the staging area
 
 ```git
 -> git clean -f  # prompts to whether remove
@@ -110,21 +110,21 @@ git checkout --filename
    # only remove untracked files - cant remove tracked files
 ```
 
-## ignoring files
+# ignoring files
 - add files to .gitignore
 
-## ignoring all files with a specific extension but tracking specific file in those
+# ignoring all files with a specific extension but tracking specific file in those
 - add *.css to .gitignore  # ignored all css files
 - add !file.css to .gitignore # tracked only one css file
 
 
-## removing commited file from local repo
+# removing commited file from local repo
 
 ```git
 git rm --cached filename   #it removes file from repo but not from the machine
 ```
 
-## git branching - basics
+# git branching - basics
 
 ```git
 git branch  #all branches
@@ -134,19 +134,19 @@ git checkout -b branchname #create nd checkout to new branch at same time
 git branch -d branchname  # delete a branch - checkout to master before deleting.
 ```
 
-## rename git branch
+# rename git branch
 
 ```git
 git branch -m <oldname> <newname>
 ```
 
-## incase while deleting branch saying branch is not fully merged,
+# incase while deleting branch saying branch is not fully merged,
 
 ```git
 git branch -D branchname
 ```
 
-## merging branches
+# merging branches
 
 ```git
 git checkout -b branch2
@@ -167,7 +167,7 @@ git merge branch2
 
 Note: changes made in sub branch doesnt affect master branch unless they r merged.
 
-## stashing changes
+# stashing changes
 
 scenario:
 	checkout to branch1 - changes to a file while in branch1 - checkout to branch2 - before not commiting changes in branch1 - raises error -abort the process - soluion: stash the changes before checkout to branch2. :)
@@ -181,7 +181,7 @@ git stash save "message"
 git stash list
 ```
 
-## Grabing changes back from stash to the branch,
+# Grabing changes back from stash to the branch,
 
 ```git
 git stash pop "stash@{0}"
@@ -207,13 +207,13 @@ git stash drop "stash@{0}"
 ```
 - it drop the stash with given stash id
 
-## to drop all stashes
+# drop all stashes
 
 ```git
 git stash clear
 ```
 
-## rollback/checkout to previous commit
+# rollback/checkout to previous commit
 
 ```git
 git checkout <commit_id> .
@@ -223,13 +223,13 @@ git checkout 09d483c .
 
 [StackOverflow](https://stackoverflow.com/a/2007704)
 
-## Push local branch to remote repo
+# Push local branch to remote repo
 
 ```git
 git push --set-upstream origin new-branch
 ```
 
-## Remove large files before git push
+# Remove large files before git push
 
 ```git
 git filter-branch --tree-filter 'rm -rf path/to/your/file' HEAD
