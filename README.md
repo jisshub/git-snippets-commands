@@ -10,7 +10,18 @@
 
 [commit changes to local repo](#commit-changes-to-local-repo)
 
-[update commit message of recent commit](update-commit-message-of-recent-commit)
+[update commit message of recent commit](#update-commit-message-of-recent-commit)
+
+[Push changes to remote repo](#Push-changes-to-remote-repo)
+
+[adding and commiting at once](#adding-and-commiting-at-once)
+
+[View the remote repository URL](#View-the-remote-repository-URL)
+
+[viewing changes made in a file](#viewing-changes-made-in-a-file)
+
+[viewing changes in the staging area](#viewing-changes-in-the-staging-area)
+
 
 # initialize a git repository
 ```git
@@ -50,7 +61,7 @@ git commit -m "commit meesage"
 git commit --amend -m "updated"
 ```
 
-# Pushing changes to remote repo
+# Push changes to remote repo
 
 ```git
 git push -u origin master (first time push)
@@ -86,7 +97,7 @@ git config --get remote.origin.url
 git diff # ++ denotes new changes, -- denotes previous changes
 ```
 
-# viewing changes added to staging area
+# viewing changes in the staging area
 
 ```git
 git diff --staged
