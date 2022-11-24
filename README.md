@@ -229,4 +229,10 @@ git checkout 09d483c .
 git push --set-upstream origin new-branch
 ```
 
+## Remove large files before git push
+
+```git
+git filter-branch --tree-filter 'rm -rf path/to/your/file' HEAD
+```
+
 ---
