@@ -1,5 +1,9 @@
 # git-snippets-commands
 
+[initialize a git repository](#initialize-a-git-repository) 
+
+[add changes to staging area](#add changes to staging area)
+
 
 # initialize a git repository
 ```git
