@@ -4,6 +4,13 @@
 
 [add changes to staging area](#add-changes-to-staging-area)
 
+[set github configuration](#set-github-configuration)
+
+[reset changes in the staging area](#reset-changes-in-the-staging-area)
+
+[commit changes to local repo](#commit-changes-to-local-repo)
+
+[update commit message of recent commit](update-commit-message-of-recent-commit)
 
 # initialize a git repository
 ```git
@@ -24,7 +31,7 @@ git config --global user.name "username"
 git config --global user.email "email"
 ```
 
-# reset changes addeds to the stagin area
+# reset changes in the staging area
 
 ```git
 git reset HEAD filename
