@@ -223,4 +223,10 @@ git checkout 09d483c .
 
 [StackOverflow](https://stackoverflow.com/a/2007704)
 
+## Push local branch to remote repo
+
+```git
+git push --set-upstream origin new-branch
+```
+
 ---
