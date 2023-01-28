@@ -109,6 +109,12 @@ git diff --staged
 git rm filename  #never delete a file direclty using rm from repo, use git rm file
 ```
 
+# checkout to previous commit
+
+```git
+git checkout 0d1d7fc32
+```
+
 # Revert to previous commit
 
 ```git
