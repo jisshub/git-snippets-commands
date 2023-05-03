@@ -22,6 +22,7 @@
 
 [viewing changes in the staging area](#viewing-changes-in-the-staging-area)
 
+[Pull changes from remote branch to local branch](#pull-changes-from-remote-branch-to-local-branch)
 
 # initialize a git repository
 ```git
