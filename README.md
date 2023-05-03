@@ -263,4 +263,21 @@ git push --set-upstream origin new-branch
 git filter-branch --tree-filter 'rm -rf path/to/your/file' HEAD
 ```
 
+# Pull changes from remote branch to local branch
+
+- Use the git pull command with the name of the remote and branch you want to pull changes from. For example, if you want to pull changes from the main branch on the origin remote, you can use the following command:
+
+```git
+git pull origin main
+```
+
+Note that the git pull command is a combination of two commands: git fetch and git merge. If you prefer to fetch the changes separately before merging them into your current branch, you can use the following commands instead:
+
+```git
+git fetch origin main
+git merge origin/main
+```
+
+
+
 ---
