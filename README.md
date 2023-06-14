@@ -50,6 +50,13 @@ git reset HEAD filename
 git reset filename
 git reset -- affects all files
 ```
+# reset changes in current branch
+
+```git
+git reset --hard  // reset the current branch to a specific commit, discarding any changes and resetting the staging area.
+git reset --hard HEAD~1  // If you've made a commit that you want to completely remove from your Git history, including the changes made in that commit.
+```
+
 # commit changes to local repo
 
 ```git
