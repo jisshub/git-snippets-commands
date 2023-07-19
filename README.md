@@ -24,6 +24,8 @@
 
 [Pull changes from remote branch to local branch](#pull-changes-from-remote-branch-to-local-branch)
 
+[Stash Changes in Current Branch and Apply the changes in new branch](#stash-changes-in-current-branch-and-apply-the-changes-in-new-branch)
+
 # initialize a git repository
 ```git
 git init
@@ -286,6 +288,43 @@ git fetch origin main
 git merge origin/main
 ```
 
+# Stash Changes in Current Branch and Apply the changes in new branch
+
+If you don't want to commit the changes in the current branch before creating a new branch, you can use Git's stash feature to temporarily save your changes and apply them to the new branch. Here's how you can do it:
+
+1. **Stash your changes:** Use the following command to stash your changes:
+
+   ```shell
+   git stash
+   ```
+
+   This command will save your changes in a temporary area and revert your working directory to the last committed state.
+
+2. **Create a new branch:** Now, create a new branch based on the current branch. You can use the following command to create a new branch:
+
+   ```shell
+   git branch new-branch-name
+   ```
+
+   This command creates a new branch with the specified name but doesn't switch to it yet.
+
+3. **Switch to the new branch:** To switch to the new branch you just created, use the following command:
+
+   ```shell
+   git checkout new-branch-name
+   ```
+
+   This command switches your working directory to the new branch.
+
+4. **Apply stashed changes:** Apply the stashed changes to the new branch using the following command:
+
+   ```shell
+   git stash apply
+   ```
+
+   This command reapplies the most recent stash to your working directory. If you have multiple stashes, you can specify a stash by using `git stash apply stash@{n}`, where `n` is the index of the stash.
+
+After following these steps, the changes you stashed will be applied to the new branch. You can continue working on the new branch and commit your changes when you're ready.
 
 
 ---
