@@ -8,6 +8,10 @@
 
 [reset changes in the staging area](#reset-changes-in-the-staging-area)
 
+[reset changes in current branch](#reset-changes-in-current-branch)
+
+[reset all changes after a pull from remote branch](#reset-all-changes-after-a-pull-from-remote-branch)
+
 [commit changes to local repo](#commit-changes-to-local-repo)
 
 [update commit message of recent commit](#update-commit-message-of-recent-commit)
@@ -59,6 +63,11 @@ git reset --hard  // reset the current branch to a specific commit, discarding a
 git reset --hard HEAD~1  // If you've made a commit that you want to completely remove from your Git history, including the changes made in that commit.
 ```
 
+# reset all changes after a pull from remote branch
+
+```git
+git reseyt --hard HEAD
+```
 # commit changes to local repo
 
 ```git
