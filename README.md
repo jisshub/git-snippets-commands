@@ -66,7 +66,7 @@ git reset --hard HEAD~1  // If you've made a commit that you want to completely 
 # reset all changes after a pull from remote branch
 
 ```git
-git reseyt --hard HEAD
+git reset --hard HEAD
 ```
 # commit changes to local repo
 
